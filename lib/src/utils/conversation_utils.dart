@@ -95,7 +95,7 @@ class ConversationUtils {
 
     if (message.type == MessageTypeConstants.groupActions) {
       cc.Action actionMessage = message as cc.Action;
-      subtitle = actionMessage.message;
+      subtitle = actionMessage.message ?? "";
     } else {
       subtitle = message.type;
     }
